@@ -1,0 +1,258 @@
+<html lang="en">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        /* Style the header */
+        
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Style the top navigation bar */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: red;
+        }
+        /* Style the topnav links */
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Change color on hover */
+        
+        .topnav a:hover {
+            background-color: white;
+            color: red;
+        }
+        /* it sets colour of the page that is currently active */
+        
+        .topnav a.active {
+            background-color: grey;
+            color: white;
+        }
+        /* Create three equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width:600px) {
+            .column {
+                width: 100%;
+            }
+        }
+        
+        .social-icons {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 5px;
+            vertical-align: middle;
+        }
+        
+        .social-icons a {
+            position: relative;
+            display: block;
+            width: 48px;
+            height: 48px;
+            word-break: break-all;
+        }
+        
+        .social-icons span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            background-image: url(social-icons.png );
+        }
+        
+        .social-icons li:nth-child(2) span {
+            background-position: -48px 0;
+        }
+        
+        .social-icons li:nth-child(3) span {
+            background-position: -96px 0;
+        }
+        
+        .social-icons li:nth-child(4) span {
+            background-position: 0 -48px;
+        }
+        
+        .social-icons li:nth-child(5) span {
+            background-position: -48px -48px;
+        }
+        
+        .social-icons li:nth-child(6) span {
+            background-position: -96px -48px;
+        }
+        /* Style the footer */
+        
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+
+        <img src="cc_banner_red.png" width="1250" height="100" alt="footer" />
+
+        <body onload="startTime()">
+            <div id="txt"></div>
+    </div>
+
+
+
+    <div class="topnav">
+        <a class="active" href="Home.html"> Home</a>
+        <a href="GamesCatalogue.html">Games Catalogue</a>
+        <a href="Gamesreview.html">Games Review</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Basket.html">
+            <img src="basket.png" alt="sorry" style="width:42px;height:42px;border:0;">
+        </a>
+
+
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Crazy Gaming starts Here</h2>
+            <!--JavaScript code goes here.-->
+            <script language="javascript">
+                function MouseRollover9(MyImage) {
+                    MyImage.src = "call_of_duty.jpg";
+
+
+
+                }
+
+                function MouseOut9(MyImage) {
+                    MyImage.src = "MostWanted.jpg";
+                }
+            </script>
+            </head>
+
+            <body>
+
+                <div align="center">
+
+                    <!--The rollover image displays here.-->
+                    <img src="call_of_duty.jpg" boarder="0px" width="150px" height="150px" onMouseOver="MouseRollover9(this)" onMouseOut="MouseOut9(this)" />
+                    <!--JavaScript code goes here.-->
+                    <script language="javascript">
+                        function MouseRollover10(MyImage) {
+                            MyImage.src = "desert.jpg";
+
+
+
+                        }
+
+                        function MouseOut10(MyImage) {
+                            MyImage.src = "Assassins.jpg";
+                        }
+                    </script>
+                    </head>
+
+                    <body>
+
+                        <div align="center">
+
+                            <!--The rollover image displays here.-->
+                            <img src="desert.jpg" boarder="0px" width="150px" height="150px" onMouseOver="MouseRollover10(this)" onMouseOut="MouseOut10(this)" />
+                        </div>
+                </div>
+        </div>
+
+        <div class="column">
+            <h2>Computer Crazy: Crazy by Name, Crazy by nature!</h2>
+            Sunil and Tom started �Computer Crazy� 3 years ago in an attempt to have a �one stop� shop where PC gaming enthusiasts like themselves could find more challenging games. They found it annoying that the �big� game retailers only stocked the main stream
+            games when they knew there were hundreds if not thousands of less well known, but no less enjoyable, games out there in cyber space! So they opened a small shop near where they lived and started trawling the net for the less well known PC
+            games and started playing and reviewing them. Those they liked they bought and stocked in the shop! They started to build PCs that were fit to play these games! Not the flash boxes with fantastic names (and fantastic prices) which did little
+            more than light up like a Christmas tree. They wanted to build high performance PCs at reasonable prices which knocked the socks off the ones available from the big chains. So that�s what they did! And pretty soon the gaming community got
+            to know about them. Now they have five shops, a large warehouse holding thousands of PC game titles and PC components, and thousands of loyal customers. And now, with this new website you can join them whenever you are in the UK. So browse
+            away, buy something if you want or just go to our review page and catch up with the latest releases. We would also really like to hear from you so register for our newsletter and join our blogging community. Come on, get it off your chest!
+            Welcome to the world of �Computer Crazy�!<b>
+  </div>
+  
+  <div class="column">
+    <h2>Upcoming Games Trailers</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hYUjA-lOaMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+<div class="footer">
+<ul class="social-icons">
+  <li><a href="https://www.instagram.com/livingindiatv/">instagram<span></span></a></li>
+  <li><a href="https://in.pinterest.com/livingindiatv/">pinterest<span></span></a></li>
+  <li><a href="https://youtube.com">youtube<span></span></a></li>
+  <li><a href="https://plus.google.com/102689304172526656580">gplus<span></span></a></li>
+  <li><a href="https://twitter.com/livingindiatv">twitter<span></span></a></li>
+  <li><a href="https://www.facebook.com/livingindiatv/">facebook<span></span></a></li>
+ </ul>
+<img src="cc_footer_red.jpg" width="1350" height="50" alt="footer" />
+
+
+</div>
+</body>
+</html>

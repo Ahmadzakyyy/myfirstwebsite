@@ -1,0 +1,416 @@
+<html lang="en">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        /* Style the header */
+        
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Style the top navigation bar */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: red;
+        }
+        /* Style the topnav links */
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Change color on hover */
+        
+        .topnav a:hover {
+            background-color: white;
+            color: red;
+        }
+        /* it sets colour of the page that is currently active */
+        
+        .topnav a.active {
+            background-color: grey;
+            color: white;
+        }
+        /* Create three equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width:600px) {
+            .column {
+                width: 100%;
+            }
+        }
+        
+        .social-icons {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 5px;
+            vertical-align: middle;
+        }
+        
+        .social-icons a {
+            position: relative;
+            display: block;
+            width: 48px;
+            height: 48px;
+            word-break: break-all;
+        }
+        
+        .social-icons span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            background-image: url(social-icons.png );
+        }
+        
+        .social-icons li:nth-child(2) span {
+            background-position: -48px 0;
+        }
+        
+        .social-icons li:nth-child(3) span {
+            background-position: -96px 0;
+        }
+        
+        .social-icons li:nth-child(4) span {
+            background-position: 0 -48px;
+        }
+        
+        .social-icons li:nth-child(5) span {
+            background-position: -48px -48px;
+        }
+        
+        .social-icons li:nth-child(6) span {
+            background-position: -96px -48px;
+        }
+        /* Style the footer */
+        
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+
+        <img src="cc_banner_red.png" width="1250" height="100" alt="footer" />
+
+        <body onload="startTime()">
+            <div id="txt"></div>
+    </div>
+
+
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="GamesCatalogue.html"> Games Catalogue</a>
+        <a href="Gamesreview.html"> Games Review</a>
+        <a class="active" href="ContactUs.html"> Contact Us</a>
+        <a href="Basket.html">
+            <img src="basket.png" alt="sorry" style="width:42px;height:42px;border:0;">
+        </a>
+
+
+    </div>
+
+    <tr valign="top">
+        <td>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                
+                * {
+                    box-sizing: border-box;
+                }
+                
+                input[type=text],
+                select,
+                textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-top: 6px;
+                    margin-bottom: 16px;
+                    resize: vertical;
+                }
+                
+                input[type=submit] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+                
+                input[type=submit]:hover {
+                    background-color: #45a049;
+                }
+                
+                .container {
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                }
+            </style>
+            </head>
+
+            <body>
+
+                <!DOCTYPE html>
+                <html>
+
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+                        body {
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        
+                        * {
+                            box-sizing: border-box;
+                        }
+                        /* Style inputs */
+                        
+                        input[type=text],
+                        select,
+                        textarea {
+                            width: 100%;
+                            padding: 12px;
+                            border: 1px solid #ccc;
+                            margin-top: 6px;
+                            margin-bottom: 16px;
+                            resize: vertical;
+                        }
+                        
+                        input[type=submit] {
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 12px 20px;
+                            border: none;
+                            cursor: pointer;
+                        }
+                        
+                        input[type=submit]:hover {
+                            background-color: #45a049;
+                        }
+                        /* Style the container/contact section */
+                        
+                        .container {
+                            border-radius: 5px;
+                            background-color: #f2f2f2;
+                            padding: 10px;
+                        }
+                        /* Create two columns that float next to eachother */
+                        
+                        .column {
+                            float: left;
+                            width: 50%;
+                            margin-top: 6px;
+                            padding: 20px;
+                        }
+                        /* Clear floats after the columns */
+                        
+                        .row:after {
+                            content: "";
+                            display: table;
+                            clear: both;
+                        }
+                        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                        
+                        @media screen and (max-width: 600px) {
+                            .column,
+                            input[type=submit] {
+                                width: 100%;
+                                margin-top: 0;
+                            }
+                        }
+                    </style>
+                </head>
+
+                <body>
+
+                    <h2>Responsive Contact Section</h2>
+
+
+                    <!DOCTYPE html>
+                    <html>
+                    <style>
+                        input[type=text],
+                        select {
+                            width: 100%;
+                            padding: 12px 20px;
+                            margin: 8px 0;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                        }
+                        
+                        input[type=submit] {
+                            width: 100%;
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 14px 20px;
+                            margin: 8px 0;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                        
+                        input[type=submit]:hover {
+                            background-color: #45a049;
+                        }
+                        
+                        div {
+                            border-radius: 5px;
+                            background-color: #f2f2f2;
+                            padding: 20px;
+                        }
+                    </style>
+
+                    <body>
+
+                        <h3>Please Fill the form below</h3>
+
+
+                        <!DOCTYPE html>
+                        <html>
+
+                        <head>
+                            <script type="text/javascript">
+                                function validateForm() {
+
+                                    var x = document.forms["myForm"]["fname"].value;
+                                    if (x == null || x == "") {
+                                        alert("First Name must be filled out");
+                                        return false;
+                                    }
+
+                                    var y = document.forms["myForm"]["lname"].value;
+                                    if (y == null || y == "") {
+                                        alert("Last name must be filled out");
+                                        return false;
+                                    }
+                                    var y = document.forms["myForm"]["email"].value;
+                                    if (y == null || y == "") {
+                                        alert("Email address must be filled out");
+                                        return false;
+                                    }
+                                    var y = document.forms["myForm"]["pnumber"].value;
+                                    if (y == null || y == "") {
+                                        alert("Phone number must be filled out");
+                                        return false;
+                                    }
+
+                                }
+                            </script>
+                        </head>
+
+                        <body>
+
+
+                            <form name="myForm" action="returnform.html" onsubmit="return validateForm()" method="post">
+                                First Name*: <input type="text" name="fname"> <br> Last Name*: <input type="text" name="lname"><br> Email*: <input type="text" name="email"> <br> Phone Number*: <input type="Text" name="pnumber"> <br> <br> Comments(Optional):
+                                <input type="Text" name="comments"> <br>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </body>
+                        <html>
+
+                    </body>
+
+                    </html>
+
+
+                    <<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.583197615429!2d-0.31271568401144206!3d51.612525210831926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876146c643e2bf5%3A0x5fa5358f7179b86e!2sStanmore%20College!5e0!3m2!1sen!2suk!4v1575893928992!5m2!1sen!2suk"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+
+
+        </td>
+    </tr>
+    <div class="footer">
+        <ul class="social-icons">
+            <li><a href="https://www.instagram.com/livingindiatv/">instagram<span></span></a></li>
+            <li><a href="https://in.pinterest.com/livingindiatv/">pinterest<span></span></a></li>
+            <li><a href="https://youtube.com">youtube<span></span></a></li>
+            <li><a href="https://plus.google.com/102689304172526656580">gplus<span></span></a></li>
+            <li><a href="https://twitter.com/livingindiatv">twitter<span></span></a></li>
+            <li><a href="https://www.facebook.com/livingindiatv/">facebook<span></span></a></li>
+        </ul>
+
+        <img src="cc_footer_red.jpg" width="100%" height="69" </div> </td>
+        </tr>
+        </table>
+
+
+    </div>
+    </body>
+
+    </html>

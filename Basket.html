@@ -1,0 +1,284 @@
+<html lang="en">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        /* Style the header */
+        
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Style the top navigation bar */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: red;
+        }
+        /* Style the topnav links */
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Change color on hover */
+        
+        .topnav a:hover {
+            background-color: white;
+            color: red;
+        }
+        /* it sets colour of the page that is currently active */
+        
+        .topnav a.active {
+            background-color: grey;
+            color: white;
+        }
+        /* Create three equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width:600px) {
+            .column {
+                width: 100%;
+            }
+        }
+        
+        .social-icons {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 5px;
+            vertical-align: middle;
+        }
+        
+        .social-icons a {
+            position: relative;
+            display: block;
+            width: 48px;
+            height: 48px;
+            word-break: break-all;
+        }
+        
+        .social-icons span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            background-image: url(social-icons.png );
+        }
+        
+        .social-icons li:nth-child(2) span {
+            background-position: -48px 0;
+        }
+        
+        .social-icons li:nth-child(3) span {
+            background-position: -96px 0;
+        }
+        
+        .social-icons li:nth-child(4) span {
+            background-position: 0 -48px;
+        }
+        
+        .social-icons li:nth-child(5) span {
+            background-position: -48px -48px;
+        }
+        
+        .social-icons li:nth-child(6) span {
+            background-position: -96px -48px;
+        }
+        /* Style the footer */
+        
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+
+        <img src="cc_banner_red.png" width="1250" height="100" alt="footer" />
+
+        <body onload="startTime()">
+            <div id="txt"></div>
+    </div>
+
+
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+
+        <a href="GamesCatalogue.html"> Games Catalogue</a>
+        <a href="Gamesreview.html"> Games Review</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <img src="basket.png" alt="sorry" style="width:42px;height:42px;border:0;">
+
+        </a>
+
+
+    </div>
+
+    <tr valign="top">
+        <td>
+            <title>Basket</title>
+
+
+
+
+            <script type="text/javascript">
+                function checkCost()
+                /* This function checks which Games the user has selected and calculates the total
+                cost  for them */
+                {
+                    var costs = [39.00, 45.00, 61.00]; // array holding costs for each treatment
+                    var totalCost = 0;
+                    var Games = document.UserDetails.elements.Games; // array holding the checkboxes
+                    for (var i = 0; i < Games.length; i++) // loops through each checkbox
+                    {
+
+                        if (Games[i].checked) // treatment selected
+                        {
+                            totalCost = totalCost + costs[i]; // add cost of this treatment to total
+                        }
+                    }
+                    alert("Total cost of these games will be �" + totalCost); // display the total cost
+                }
+            </script>
+
+            </head>
+
+            <body>
+                <div id="container">
+
+
+
+
+
+                    </ul>
+                    <p>&nbsp;</p>
+                    <!-- end #header -->
+                </div>
+
+
+                <div id="mainContent">
+                    <h1>Enjoy Shopping with us</h1>
+
+                    <form name="UserDetails">
+                        <fieldset>
+                            <legend>
+                                <h3>Please the select the game that you need</h3>
+                            </legend>
+                            <!-- Check Boxes -->
+                            <h4>If you not sure the game that you need. Do select all please! :) </h4>
+
+                            <table width="600" border="1">
+                                <tr>
+                                    <td><img src="blood.jpg" alt="Sorry Image not uploaded" width="140" height="100" /></td>
+                                    <td>
+                                        <font size="3" color="grey">Blood Borne price=�39</font>
+                                    </td>
+                                    <td><input type="checkbox" name="Games" value="Fortnite" /></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="darksouls.jpg" alt="Sorry Image not uploaded" width="100" height="130" /></td>
+                                    <td>
+                                        <font size="3" color="grey">Apex price =�45</font>
+                                    </td>
+                                    <td><input type="checkbox" name="Games" value="Spore" /></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="ResidentEvil.jpg" alt="Sorry Image not uploaded" width="160" height="120" /></td>
+                                    <td>
+                                        <font size="3" color="grey">Resident Evil price=�61</font>
+                                    </td>
+                                    <td><input type="checkbox" name="Games" value="Doom" /></td>
+
+                            </table>
+
+
+                            <br/>
+                            <p> Click here to check cost of Games:&nbsp&nbsp
+                                <input type="button" value="check cost" onclick="checkCost()" /> </P>
+
+                            <p>What day would you prefer to come and collect?:</p>
+                            <select name="days">
+			<option value="mon">Monday</option>
+			<option value="tue">Tuesday</option>
+			<option value="wed" >Wednesday</option>
+			<option value="thurs">Thursday</option>
+			<option value="fri">Friday</option>
+			</select>
+
+                        </fieldset>
+                    </form>
+
+                    <!-- end #mainContent -->
+                </div>
+
+                <div id="footer">
+                    <div class="header">
+                        <img src="cc_footer_red.jpg" width="1350" height="50" alt="footer" />
+                        <!-- end #footer -->
+                    </div>
+                    <!-- end Container -->
+                </div>
+            </body>
+
+</html>

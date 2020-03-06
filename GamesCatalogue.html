@@ -1,0 +1,327 @@
+<html lang="en">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        /* Style the header */
+        
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Style the top navigation bar */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: red;
+        }
+        /* Style the topnav links */
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Change color on hover */
+        
+        .topnav a:hover {
+            background-color: white;
+            color: red;
+        }
+        /* it sets colour of the page that is currently active */
+        
+        .topnav a.active {
+            background-color: grey;
+            color: white;
+        }
+        /* Create three equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width:600px) {
+            .column {
+                width: 100%;
+            }
+        }
+        
+        .social-icons {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 5px;
+            vertical-align: middle;
+        }
+        
+        .social-icons a {
+            position: relative;
+            display: block;
+            width: 48px;
+            height: 48px;
+            word-break: break-all;
+        }
+        
+        .social-icons span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            background-image: url(social-icons.png );
+        }
+        
+        .social-icons li:nth-child(2) span {
+            background-position: -48px 0;
+        }
+        
+        .social-icons li:nth-child(3) span {
+            background-position: -96px 0;
+        }
+        
+        .social-icons li:nth-child(4) span {
+            background-position: 0 -48px;
+        }
+        
+        .social-icons li:nth-child(5) span {
+            background-position: -48px -48px;
+        }
+        
+        .social-icons li:nth-child(6) span {
+            background-position: -96px -48px;
+        }
+        /* Style the footer */
+        
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+
+        <img src="cc_banner_red.png" width="1250" height="100" alt="footer" />
+
+        <body onload="startTime()">
+            <div id="txt"></div>
+    </div>
+
+
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="GamesCatalogue.html"> Games Catalogue</a>
+        <a href="Gamesreview.html">Games Review</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Basket.html">
+            <img src="basket.png" alt="sorry" style="width:42px;height:42px;border:0;">
+        </a>
+
+
+    </div>
+
+    <tr valign="top">
+        <td>
+
+            <table style="width:100%" border="1">
+                <tr>
+                    <th> Action Games</th>
+                    <th>Descrpition </th>
+                    <th> Cost �
+                        <th>
+                </tr>
+                <td align="center">
+                    <!--JavaScript code goes here.-->
+                    <script language="javascript">
+                        function MouseRollover1(MyImage) {
+                            MyImage.src = "call_of_duty.jpg";
+
+
+
+                        }
+
+                        function MouseOut1(MyImage) {
+                            MyImage.src = "MostWanted.jpg";
+                        }
+                    </script>
+                    </head>
+
+                    <body>
+
+                        <div align="center">
+
+                            <!--The rollover image displays here.-->
+                            <img src="call_of_duty.jpg" boarder="0px" width="150px" height="150px" onMouseOver="MouseRollover1(this)" onMouseOut="MouseOut1(this)" /> </td>
+                <td align="center">
+                    <p> Call of Duty: Modern Warfare is a first-person shooter video game developed by Infinity Ward and published by Activision. Serving as the sixteenth overall installment in the Call of Duty series, as well as a reboot of the Modern Warfare
+                        sub-series,[1][2][3] it was released on October 25, 2019, for Microsoft Windows, PlayStation 4, and Xbox One. The game takes place in a realistic and modern setting. The campaign follows a CIA officer and British SAS forces as
+                        they team up with rebels from the fictional country of Urzikstan, combating together against Russian forces who have invaded the country. The game's Special Ops mode features cooperative play missions that follow up the campaign's
+                        story. The multiplayer mode supports cross-platform multiplayer for the first time in the series. </p>
+                </td>
+                <td align="center">
+                    <p> 70 </p>
+                </td>
+    </tr>
+
+    <td align="center">
+        <!--JavaScript code goes here.-->
+        <script language="javascript">
+            function MouseRollover2(MyImage) {
+                MyImage.src = "GTA.jpg";
+
+
+
+            }
+
+            function MouseOut2(MyImage) {
+                MyImage.src = "Witcher.jpg";
+            }
+        </script>
+        </head>
+
+        <body>
+
+            <div align="center">
+
+                <!--The rollover image displays here.-->
+                <img src="GTA.jpg" boarder="0px" width="150px" height="150px" onMouseOver="MouseRollover2(this)" onMouseOut="MouseOut2(this)" /> </td>
+    <td align="center">
+        <p> Need for Speed: Most Wanted is a 2005 open world racing video game, and the ninth installment in the Need for Speed series. Developed by EA Canada and published by Electronic Arts, it was released on November 11, 2005, for PlayStation 2, Xbox,
+            GameCube, Nintendo DS, Microsoft Windows, Game Boy Advance and Xbox 360. An additional version, entitled Need for Speed: Most Wanted 5-1-0, was released in the same year for PlayStation Portable. The game focus on street racing-oriented game
+            play involving a selection of events and racing circuits found within the fictional city of Rockport, with the game's main story involving players taking on the city's most elite street racers to become the most wanted racer of the group.
+            </p>
+    </td>
+    <td align="center">
+        <p> 65 </p>
+    </td>
+    </tr>
+
+    <td align="center">
+        <!--JavaScript code goes here.-->
+        <script language="javascript">
+            function MouseRollover3(MyImage) {
+                MyImage.src = "ResidentEvil.jpg";
+
+
+
+            }
+
+            function MouseOut3(MyImage) {
+                MyImage.src = "Fifa.jpg";
+            }
+        </script>
+        </head>
+
+        <body>
+
+            <div align="center">
+
+                <!--The rollover image displays here.-->
+                <img src="Assassins.jpg" boarder="0px" width="150px" height="150px" onMouseOver="MouseRollover3(this)" onMouseOut="MouseOut3(this)" /> </td>
+    <td align="center">
+        <p> Red Dead Redemption 2[a] is an action-adventure game developed and published by Rockstar Games. It was released for the PlayStation 4 and Xbox One in October 2018, and for Microsoft Windows in November 2019. The game is the third entry in the
+            Red Dead series and is a prequel to the 2010 game Red Dead Redemption. The story is set in 1899 in a fictionalized representation of the Western, Midwestern and Southern United States and follows outlaw Arthur Morgan, a member of the Van der
+            Linde gang. Arthur must deal with the decline of the Wild West whilst attempting to survive against government forces, rival gangs, and other adversaries. The story also follows fellow gang member John Marston, the protagonist of Red Dead
+            Redemption. </p>
+    </td>
+    <td align="center">
+        <p> 85 </p>
+    </td>
+    <tr>
+        </table>
+        <tr>
+            <td colspan="3" align="center">
+                <div class="footer">
+                    <div class="footer">
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/livingindiatv/">instagram<span></span></a></li>
+                            <li><a href="https://in.pinterest.com/livingindiatv/">pinterest<span></span></a></li>
+                            <li><a href="https://youtube.com">youtube<span></span></a></li>
+                            <li><a href="https://plus.google.com/102689304172526656580">gplus<span></span></a></li>
+                            <li><a href="https://twitter.com/livingindiatv">twitter<span></span></a></li>
+                            <li><a href="https://www.facebook.com/livingindiatv/">facebook<span></span></a></li>
+                        </ul>
+                        <img src="cc_footer_red.jpg" width="100%" height="69" </div> </td>
+        </tr>
+        </table>
+
+
+
+
+
+
+        </p>
+        </div>
+        </td>
+
+
+
+        </td>
+        <tr>
+            <td colspan "3" align="center">
+                <div class="footer">
+                </div>
+            </td>
+        </tr>
+        </table>
+
+
+
+        </div>
+        </body>
+
+</html>

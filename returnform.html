@@ -1,0 +1,180 @@
+<html lang="en">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<head>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: red;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: white;
+  color: red;
+}
+
+/* it sets colour of the page that is currently active */
+.topnav a.active {
+background-color: grey;
+color:white;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.social-icons {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+ }
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+ }
+
+.social-icons a {
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    word-break: break-all;
+ }
+
+.social-icons  span  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background-image: url( social-icons.png );
+ }
+
+.social-icons li:nth-child(2)  span {
+    background-position: -48px 0;
+ }
+
+.social-icons li:nth-child(3) span {
+    background-position: -96px 0;
+ }
+
+.social-icons li:nth-child(4) span {
+    background-position: 0 -48px;
+ }
+
+.social-icons li:nth-child(5) span  {
+    background-position: -48px -48px;
+ }
+
+.social-icons li:nth-child(6) span  {
+    background-position: -96px -48px;
+ }
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="header">
+
+ <img src="cc_banner_red.png" width="1250" height="100" alt="footer" />
+<body  onload ="startTime()">
+<div id="txt"></div>
+</div>
+
+  
+
+  
+
+
+
+<h1 style="text-align:center">Thank you for submitting the form, we will be in touch soon!</h1>
+  </div>
+</div>
+
+
+<div class="footer">
+<ul class="social-icons">
+
+ </ul>
+<img src="cc_footer_red.jpg" width="1350" height="50" alt="footer" />
+
+</div>
+</body>
+</html>
