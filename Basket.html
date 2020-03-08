@@ -22,7 +22,7 @@
             return i;
         }
     </script>
-    <title>CSS Website Layout</title>
+    <title>The basket Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -198,7 +198,7 @@
                             totalCost = totalCost + costs[i]; // add cost of this treatment to total
                         }
                     }
-                    alert("Total cost of these games will be �" + totalCost); // display the total cost
+                    alert("Total cost of these games will be " + totalCost); // display the total cost
                 }
             </script>
 
@@ -232,21 +232,21 @@
                                 <tr>
                                     <td><img src="blood.jpg" alt="Sorry Image not uploaded" width="140" height="100" /></td>
                                     <td>
-                                        <font size="3" color="grey">Blood Borne price=�39</font>
+                                        <font size="3" color="grey">Blood Borne price: 39
                                     </td>
                                     <td><input type="checkbox" name="Games" value="Fortnite" /></td>
                                 </tr>
                                 <tr>
                                     <td><img src="darksouls.jpg" alt="Sorry Image not uploaded" width="100" height="130" /></td>
                                     <td>
-                                        <font size="3" color="grey">Apex price =�45</font>
+                                        <font size="3" color="grey">Apex price price: 45</font>
                                     </td>
                                     <td><input type="checkbox" name="Games" value="Spore" /></td>
                                 </tr>
                                 <tr>
                                     <td><img src="ResidentEvil.jpg" alt="Sorry Image not uploaded" width="160" height="120" /></td>
                                     <td>
-                                        <font size="3" color="grey">Resident Evil price=�61</font>
+                                        <font size="3" color="grey">Resident Evil price:61</font>
                                     </td>
                                     <td><input type="checkbox" name="Games" value="Doom" /></td>
 
@@ -259,12 +259,12 @@
 
                             <p>What day would you prefer to come and collect?:</p>
                             <select name="days">
-			<option value="mon">Monday</option>
-			<option value="tue">Tuesday</option>
-			<option value="wed" >Wednesday</option>
-			<option value="thurs">Thursday</option>
-			<option value="fri">Friday</option>
-			</select>
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed" >Wednesday</option>
+                <option value="thurs">Thursday</option>
+                <option value="fri">Friday</option>
+                </select>
 
                         </fieldset>
                     </form>
@@ -279,6 +279,43 @@
                     </div>
                     <!-- end Container -->
                 </div>
+                <!-- Code injected by live-server -->
+                <script type="text/javascript">
+                    // <![CDATA[  <-- For SVG support
+                    if ('WebSocket' in window) {
+                        (function() {
+                            function refreshCSS() {
+                                var sheets = [].slice.call(document.getElementsByTagName("link"));
+                                var head = document.getElementsByTagName("head")[0];
+                                for (var i = 0; i < sheets.length; ++i) {
+                                    var elem = sheets[i];
+                                    var parent = elem.parentElement || head;
+                                    parent.removeChild(elem);
+                                    var rel = elem.rel;
+                                    if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                        var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                        elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                                    }
+                                    parent.appendChild(elem);
+                                }
+                            }
+                            var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                            var address = protocol + window.location.host + window.location.pathname + '/ws';
+                            var socket = new WebSocket(address);
+                            socket.onmessage = function(msg) {
+                                if (msg.data == 'reload') window.location.reload();
+                                else if (msg.data == 'refreshcss') refreshCSS();
+                            };
+                            if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                                console.log('Live reload enabled.');
+                                sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                            }
+                        })();
+                    } else {
+                        console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+                    }
+                    // ]]>
+                </script>
             </body>
 
 </html>

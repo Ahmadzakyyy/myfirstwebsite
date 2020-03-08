@@ -22,9 +22,8 @@
             return i;
         }
     </script>
-    <title>CSS Website Layout</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Crazy</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -225,34 +224,71 @@
 
         <div class="column">
             <h2>Computer Crazy: Crazy by Name, Crazy by nature!</h2>
-            Sunil and Tom started �Computer Crazy� 3 years ago in an attempt to have a �one stop� shop where PC gaming enthusiasts like themselves could find more challenging games. They found it annoying that the �big� game retailers only stocked the main stream
-            games when they knew there were hundreds if not thousands of less well known, but no less enjoyable, games out there in cyber space! So they opened a small shop near where they lived and started trawling the net for the less well known PC
-            games and started playing and reviewing them. Those they liked they bought and stocked in the shop! They started to build PCs that were fit to play these games! Not the flash boxes with fantastic names (and fantastic prices) which did little
-            more than light up like a Christmas tree. They wanted to build high performance PCs at reasonable prices which knocked the socks off the ones available from the big chains. So that�s what they did! And pretty soon the gaming community got
-            to know about them. Now they have five shops, a large warehouse holding thousands of PC game titles and PC components, and thousands of loyal customers. And now, with this new website you can join them whenever you are in the UK. So browse
-            away, buy something if you want or just go to our review page and catch up with the latest releases. We would also really like to hear from you so register for our newsletter and join our blogging community. Come on, get it off your chest!
-            Welcome to the world of �Computer Crazy�!<b>
-  </div>
-  
-  <div class="column">
-    <h2>Upcoming Games Trailers</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/hYUjA-lOaMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-<div class="footer">
-<ul class="social-icons">
-  <li><a href="https://www.instagram.com/livingindiatv/">instagram<span></span></a></li>
-  <li><a href="https://in.pinterest.com/livingindiatv/">pinterest<span></span></a></li>
-  <li><a href="https://youtube.com">youtube<span></span></a></li>
-  <li><a href="https://plus.google.com/102689304172526656580">gplus<span></span></a></li>
-  <li><a href="https://twitter.com/livingindiatv">twitter<span></span></a></li>
-  <li><a href="https://www.facebook.com/livingindiatv/">facebook<span></span></a></li>
- </ul>
-<img src="cc_footer_red.jpg" width="1350" height="50" alt="footer" />
-
-
-</div>
-</body>
-</html>
+            Sunil and Tom started Computer Crazy 3 years ago in an attempt to have a one stop shop where PC gaming enthusiasts like themselves could find more challenging games. They found it annoying that the big game retailers only stocked the main stream games
+            when they knew there were hundreds if not thousands of less well known, but no less enjoyable, games out there in cyber space! So they opened a small shop near where they lived and started trawling the net for the less well known PC games
+            and started playing and reviewing them. Those they liked they bought and stocked in the shop! They started to build PCs that were fit to play these games! Not the flash boxes with fantastic names (and fantastic prices) which did little more
+            than light up like a Christmas tree. They wanted to build high performance PCs at reasonable prices which knocked the socks off the ones available from the big chains. So that's what they did! And pretty soon the gaming community got to know
+            about them. Now they have five shops, a large warehouse holding thousands of PC game titles and PC components, and thousands of loyal customers. And now, with this new website you can join them whenever you are in the UK. So browse away, buy
+            something if you want or just go to our review page and catch up with the latest releases. We would also really like to hear from you so register for our newsletter and join our blogging community. Come on, get it off your chest! Welcome to
+            the world of Computer Crazy!<b>
+      </div>
+      
+      <div class="column">
+        <h2>Upcoming Games Trailers</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hYUjA-lOaMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+    
+    <div class="footer">
+    <ul class="social-icons">
+      <li><a href="https://www.instagram.com/livingindiatv/">instagram<span></span></a></li>
+      <li><a href="https://in.pinterest.com/livingindiatv/">pinterest<span></span></a></li>
+      <li><a href="https://youtube.com">youtube<span></span></a></li>
+      <li><a href="https://plus.google.com/102689304172526656580">gplus<span></span></a></li>
+      <li><a href="https://twitter.com/livingindiatv">twitter<span></span></a></li>
+      <li><a href="https://www.facebook.com/livingindiatv/">facebook<span></span></a></li>
+     </ul>
+    <img src="cc_footer_red.jpg" width="1350" height="50" alt="footer" />
+    
+    
+    </div>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script></body>
+    </html>
